@@ -1,23 +1,22 @@
 class Rooms:
-    
     room_name = ""
     room_desc = ""
-
-    north = 0
-    south = 0
-    west = 0
-    east = 0
-    '''Navigation paths will be controlled by a binary 0 or 1 system
-    where when a direction is set to 0, the path will be closed
-    however when it is set to 1 the path will be open and the player
-    will be allowed to treverse the desitred direction.'''
-
-    def __init__ (north, south, east, west):     
-        self._north = north
-        self._south = south
-        self._west = west
-        self._east = east
-
+    room_player = 0 #0 is no, 1 is yes
+    room_links = []
+    #room_chest =
     
+
+    def __init__ (room_name, room_desc):
+        self._room_name = room_name
+        self._room_desc = room_desc
+
+
+    def item_pickup():
+        pass
+        #entity_inv.append = item
     
-    
+
+room1 = Room("Entry Hall", "", 1, 0, 0, 0, 1)
+
+def start_room():
+    setRoom_player.room1 = 1
