@@ -3,6 +3,12 @@ class Rooms:
     room_desc = ""
     room_position = []
     room_links = []
+    #Direct link to other rooms 
+    r_north = ""
+    r_south = ""
+    r_west = ""
+    r_east = ""
+    
     #room_chest = #Calls a chest to appear in the room 
     #room_fight = #Calls a fight to play out when you enter the room
     
@@ -15,16 +21,19 @@ class Rooms:
 
     def player_travel():
         if("N" in self_room_links ):
+            room_choice = input('Enter the direction you would like to Travel')#REPLACE
+            if(room_choice == 'N'):
+                #load new room object (r_north)
+                
+                
+
+        if("W" in self._room_links):
             pass
 
-        if("W" in self._room_links ):
-            pass
-        
-
-        if("E" in self._room_links ):
+        if("E" in self._room_links):
             pass
 
-        if("S" in self._room_links ):
+        if("S" in self._room_links):
             pass
 
         else:
