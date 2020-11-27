@@ -174,7 +174,18 @@ class GUI:
                 self._st.insert(END,self._room_des[self._curr_room]+ "\n")
                 if (self._room_items[self._curr_room] != ''):
                     self._st.insert(END,self._room_items[self._curr_room]+ "\n")
+                    #---------adding item to your list -----------
+                    self._your_items.append(self._room_items[self._curr_room])
+                    for i in range(len(self._your_items)):
+                        new_items += self._room_items[self._curr_room]
                 self._st.configure(state='disabled')
+                #add item to inventory
+                '''
+                for item in range( len(things) ):    #looping through length of list
+                    st.insert(END,things[item]+ "\n") #adding list onto scrolled text area
+                '''
+                #---update inventory-------------
+                self._inv.config(text= new_items)
                 
         elif(btn == "East" ):
             if(self._e[self._curr_room] != 99):
@@ -185,7 +196,18 @@ class GUI:
                 self._st.insert(END,self._room_des[self._curr_room]+ "\n")
                 if (self._room_items[self._curr_room] != ''):
                     self._st.insert(END,self._room_items[self._curr_room]+ "\n")
+                    #---------adding item to your list -----------
+                    self._your_items.append(self._room_items[self._curr_room])
+                    for i in range(len(self._your_items)):
+                        new_items += self._room_items[self._curr_room]
                 self._st.configure(state='disabled')
+                #add item to inventory
+                '''
+                for item in range( len(things) ):    #looping through length of list
+                    st.insert(END,things[item]+ "\n") #adding list onto scrolled text area
+                '''
+                #---update inventory-------------
+                self._inv.config(text= new_items)
                 
         elif(btn == "West" ):
             if(self._w[self._curr_room] != 99):
@@ -196,7 +218,18 @@ class GUI:
                 self._st.insert(END,self._room_des[self._curr_room]+ "\n")
                 if (self._room_items[self._curr_room] != ''):
                     self._st.insert(END,self._room_items[self._curr_room]+ "\n")
+                    #---------adding item to your list -----------
+                    self._your_items.append(self._room_items[self._curr_room])
+                    for i in range(len(self._your_items)):
+                        new_items += self._room_items[self._curr_room]
                 self._st.configure(state='disabled')
+                #add item to inventory
+                '''
+                for item in range( len(things) ):    #looping through length of list
+                    st.insert(END,things[item]+ "\n") #adding list onto scrolled text area
+                '''
+                #---update inventory-------------
+                self._inv.config(text= new_items)
                 
         
 
