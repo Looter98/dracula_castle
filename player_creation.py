@@ -24,9 +24,11 @@ tk.Button(master,
                                                 column=1, 
                                                     sticky=tk.W, 
                                                        pady=4)
-'''
-from tkinter import *
 
+root = Tk()
+root.geometry("500x500")
+root.title("navigation")
+'''
 root = Tk()
 w1 = Radiobutton(root, text="option 1")
 w2 = Radiobutton(root, text="option 2")
