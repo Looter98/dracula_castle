@@ -1,3 +1,5 @@
+import tkinter as tk
+
 class Entity:
     #GENERAL
     entity_name = ""
@@ -13,8 +15,8 @@ class Entity:
     #Inventory
     entity_inv = []
         
-    def __init__(self, entity_name, entity_species): #player character object
-        self._entity_name = entity_name
+    def __init__(self, _name, entity_species, entity_health, entity_defense, entity_attack): #player character object
+        self._entity_name = _name
         self._entity_species = entity_species
         self._entity_attack = entity_attack
         self._entity_health = entity_health 
@@ -28,12 +30,6 @@ class Entity:
                             
     def setEntity_name( self, entity_name ):
         self._entity_name = entity_name
-
-    def getEntity_species( self ):
-        return self._entity_species
-                            
-    def setEntity_species( self, entity_species ):
-        self._entity_species = entity_species
 
     #DEFENSE
     def getEntity_health( self ):
@@ -54,5 +50,37 @@ class Entity:
                             
     def setEntity_attack( self, entity_attack ):
         self._entity_attack = entity_attack
-        
+
+
+class Player_create:
+    name = ''
+
+    master = tk.Tk()
+
+    e1 = tk.Entry(master)
+
+    e1.grid(row=0, column=1)
+
+    #name entry system
+    def get_name():
+        global name
+        name=e1.get() #assigning entry text to var
+        player = Entity(name, "Human", 100, 10, 20)
+        print(player.getEntity_name( ))
+
+    tk.Label(master, 
+        text="What is your name?").grid(row=0)
+
+    tk.Button(master, 
+              text='Enter', command = get_name ).grid(row=3, 
+                                                     column=1, 
+                                                        sticky=tk.W, 
+                                                           pady=4)
+
+
+
+
+
+
+
         
